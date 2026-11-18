@@ -1,0 +1,1159 @@
+# Halo settings
+#
+# The game writes this file with the defaults when it is missing: delete
+# it to go back to them. Each setting can also be set for one run with
+# the environment variable named with it, which wins over this file.
+
+[display]
+
+# Start fullscreen, drawing at the display's resolution and shape; false
+# starts in a window, which draws the Xbox's 640x480. F11 switches.
+# (for one run: HALO_FULLSCREEN=<value>)
+fullscreen = true
+
+# The window's size as a multiple of 640x480 (it can be resized).
+# (for one run: HALO_WINDOW_SCALE=<value>)
+window_scale = 2
+
+# Wait for the display between frames; false draws as fast as possible.
+# (for one run: HALO_NO_VSYNC=1 makes it false)
+vsync = true
+
+# Draw a frame for every display refresh, blending between the game's 30
+# ticks a second; false keeps the original 30 frames a second.
+# (for one run: HALO_INTERPOLATION=<value>)
+interpolation = true
+
+# Rendered frames per second: 1 to 1200, or 0 for unlimited. VSync can
+# still impose the display refresh rate. Changed immediately by Settings.
+# (for one run: HALO_FRAME_RATE_LIMIT=<value>)
+frame_rate_limit = 0
+
+# Rendering resolution: 144, 240, 480, 1080, 1440, 2160 (4K), or 0 for
+# the screen's own size. Changed immediately by the Settings menu.
+# (for one run: HALO_RENDER_HEIGHT=<value>)
+render_height = 0
+
+# Custom Forge texture resolution: 1 for the original lossless assets or 2
+# for the browser-upscaled 2x assets. Changed immediately by Settings.
+# (for one run: HALO_TEXTURE_SCALE=<value>)
+texture_scale = 1
+
+# With render_height 0, the rendering resolution as a percent of the
+# display's, 25 to 200: below 100 is faster, above 100 is sharper.
+# (for one run: HALO_RENDER_SCALE=<value>)
+render_scale = 100
+
+# Horizontal field of view of the gameplay cameras in degrees on a 4:3
+# screen, 60 to 120 (70 is the original). Zoom keeps its ratio.
+# (for one run: HALO_FIELD_OF_VIEW=<value>)
+field_of_view = 70
+
+# Brightness (gamma) of the whole picture in percent, 50 to 150.
+# (for one run: HALO_BRIGHTNESS=<value>)
+brightness = 100
+
+# Camera motion blur strength in percent, 0 (off) to 100. The HUD and
+# your own weapon stay sharp.
+# (for one run: HALO_MOTION_BLUR=<value>)
+motion_blur = 0
+
+# Anti-aliasing of the 3D view: 0 off, 1 FXAA. For more, raise
+# render_scale above 100 (supersampling).
+# (for one run: HALO_ANTI_ALIASING=<value>)
+anti_aliasing = 0
+
+# Anisotropic texture filtering: 1 (off), 2, 4, 8 or 16.
+# (for one run: HALO_ANISOTROPY=<value>)
+anisotropy = 1
+
+# Draw lens flares around bright lights.
+# (for one run: HALO_LENS_FLARES=<value>)
+lens_flares = true
+
+# Draw detail objects: the grass, pebbles and small plants on the ground.
+# (for one run: HALO_DETAIL_OBJECTS=<value>)
+detail_objects = true
+
+[audio]
+
+# Play sound.
+# (for one run: HALO_NO_AUDIO=1 makes it false)
+enabled = true
+
+# The volume of everything, 0.0 to 1.0.
+# (for one run: HALO_VOLUME=<value>)
+volume = 1.0
+
+# The volume of the music during play, in percent (0 to 100).
+# (for one run: HALO_MUSIC_VOLUME=<value>)
+music_volume = 100
+
+# The volume of the main menu's music, in percent.
+# (for one run: HALO_MENU_MUSIC_VOLUME=<value>)
+menu_music_volume = 100
+
+# The volume of weapons, vehicles, impacts, footsteps and the menus'
+# sounds, in percent.
+# (for one run: HALO_EFFECTS_VOLUME=<value>)
+effects_volume = 100
+
+# The volume of ambient sound: wind, water, machinery, computers, in
+# percent.
+# (for one run: HALO_AMBIENT_VOLUME=<value>)
+ambient_volume = 100
+
+# The volume of dialogue: Cortana, the cutscenes and the characters'
+# chatter, in percent.
+# (for one run: HALO_DIALOGUE_VOLUME=<value>)
+dialogue_volume = 100
+
+# Silence the game while its window is not the one in front.
+# (for one run: HALO_MUTE_IN_BACKGROUND=<value>)
+mute_in_background = false
+
+[input]
+
+# How far the view turns for the mouse's movement.
+# (for one run: HALO_MOUSE_SENSITIVITY=<value>)
+mouse_sensitivity = 1.0
+
+# Moving the mouse forward looks down.
+# (for one run: HALO_MOUSE_INVERT=1 makes it true)
+invert_mouse = false
+
+# Keep keyboard/mouse on Player 1 and assign the first physical gamepad to
+# Player 2. This permits keyboard-and-gamepad split screen.
+# (for one run: HALO_SEPARATE_GAMEPAD=<value>)
+separate_gamepad = false
+
+[game]
+
+# The language the game asks the Xbox for: "ja", "de", "fr", "es" or "it";
+# empty for English. The game data decides what is translated.
+# (for one run: HALO_LANGUAGE=<value>)
+language = ""
+
+# Allow eligible one-handed weapons picked up with the action button to pair.
+# The left trigger fires the left gun; grenades, melee and zoom wait until it is stowed.
+# (for one run: HALO_DUAL_WIELDING=<value>)
+dual_wielding = true
+
+[map]
+
+# Mirror the playable world and horizontal controls while keeping HUD text
+# readable: 0 never, 1 random once per level load, 2 always.
+# (for one run: HALO_MIRROR_LEVEL=<value>)
+mirror_level = 0
+
+[paths]
+
+# The folder holding the game data's maps folder; empty looks in the
+# working directory and its assets folder. Windows paths are easiest in
+# single quotes: 'C:\Games\Halo'.
+# (for one run: HALO_DATA_ROOT=<value>)
+data = "assets"
+
+# Where saved games and profiles go; empty for the usual place
+# (~/.local/share/halo-linux, or %APPDATA%\halo on Windows).
+# (for one run: HALO_SAVE_ROOT=<value>)
+saves = ""
+
+[network]
+
+# This machine's IPv4 address for system link, for a machine on several
+# networks; empty chooses one.
+# (for one run: HALO_NET_ADDRESS=<value>)
+address = ""
+
+# Comma-separated IPv4 addresses system link sends its announcements to
+# instead of the local network's broadcast address (for VPNs); empty for
+# the local network.
+# (for one run: HALO_NET_BROADCAST=<value>)
+broadcast = ""
+
+# "distributed" (work in progress, port/linux/NETCODE.md) predicts each
+# player's own moves and lets the host decide the rest; "lockstep" plays
+# system link as the Xbox game did. The host's is played: a machine that
+# joins a game plays its host's.
+# (for one run: HALO_NETCODE=<value>)
+netcode = "distributed"
+
+# Internet play: hosting makes an invite link (logged, and put on the
+# clipboard) that lets whoever has it join over the internet; opening a
+# link (or copying one before switching to the game) joins. Only people
+# with the invite can join. Off keeps system link to the local network.
+# (for one run: HALO_NET_ONLINE=<value>)
+online = true
+
+# Join the game of an invite link found on the clipboard when the game
+# comes to the front.
+# (for one run: HALO_NET_JOIN_FROM_CLIPBOARD=<value>)
+join_from_clipboard = true
+
+# The UDP port internet play uses; 0 picks one. A fixed one can be
+# forwarded on the router, for networks whose NAT stops connections.
+# (for one run: HALO_NET_TUNNEL_PORT=<value>)
+tunnel_port = 0
+
+# Let internet play ask the router (UPnP) to forward its port, for
+# networks whose NAT stops connections: when a player joins this
+# machine's game, and when joining a game takes too long. False never
+# asks.
+# (for one run: HALO_NET_ALLOW_UPNP=<value>)
+allow_upnp = true
+
+# Public MQTT brokers through which the machines of an invite find each
+# other (its messages are encrypted); comma-separated host:port.
+# (for one run: HALO_NET_BROKERS=<value>)
+signalling_brokers = "broker.emqx.io:1883,broker.hivemq.com:1883,test.mosquitto.org:1883"
+
+# Public STUN servers that tell this machine its internet address;
+# comma-separated host:port.
+# (for one run: HALO_NET_STUN=<value>)
+stun_servers = "stun.l.google.com:19302,stun.cloudflare.com:3478"
+
+# Host late joins for Standard: 0 lobby only, 1 anytime.
+# (for one run: HALO_JOIN_STANDARD=<value>)
+join_standard = 1
+
+# Host late joins for Forge: 0 lobby only, 1 anytime.
+# (for one run: HALO_JOIN_FORGE=<value>)
+join_forge = 1
+
+# Host late joins for Theater: 0 lobby only, 1 anytime.
+# (for one run: HALO_JOIN_THEATER=<value>)
+join_theater = 1
+
+# Host late joins for Machinima: 0 lobby only, 1 anytime.
+# (for one run: HALO_JOIN_MACHINIMA=<value>)
+join_machinima = 1
+
+# Host late joins for all Firefight presets: 0 lobby only, 1 anytime, 2 between waves.
+# (for one run: HALO_JOIN_FIREFIGHT=<value>)
+join_firefight = 1
+
+# Host late joins for Infection: 0 lobby only, 1 anytime.
+# (for one run: HALO_JOIN_INFECTION=<value>)
+join_infection = 1
+
+# Password required before new peers enter your lobby (up to 63 UTF-8 bytes). Empty allows public joins.
+# (for one run: HALO_HOST_PASSWORD=<value>)
+host_password = ""
+
+# Password for the next host you join. Empty is valid for public sessions.
+# (for one run: HALO_JOIN_PASSWORD=<value>)
+join_password = ""
+
+[discord]
+
+# The Discord application internet play invites go through while the
+# Discord desktop client runs; empty for none.
+# (for one run: HALO_DISCORD_APPLICATION=<value>)
+application_id = "1553978809840050229"
+
+[update]
+
+# Look for a new version when the game starts, and offer to update to it;
+# false never looks (the game's "Do not ask again" writes false here).
+# (for one run: HALO_UPDATE_AUTO=<value>)
+auto = true
+
+[debug]
+
+# Automated system link sessions for testing (port/linux/game/network_test.c):
+# "host:<map>" hosts a game on that map, "join" joins the first game found;
+# empty for none.
+# (for one run: HALO_NETWORK_TEST=<value>)
+network_test = ""
+
+# Seconds after hosting that an automated test game starts.
+# (for one run: HALO_NETWORK_TEST_START=<value>)
+network_test_start = 15.0
+
+# Every this many seconds an automated test host kills its last player; 0 never.
+# (for one run: HALO_NETWORK_TEST_KILL=<value>)
+network_test_kill = 0.0
+
+# Every this many seconds each automated test player hits the next with
+# their weapon; 0 never.
+# (for one run: HALO_NETWORK_TEST_SHOOT=<value>)
+network_test_shoot = 0.0
+
+# This many seconds into an automated test game the host seats its last
+# player as a vehicle's driver (and out 15 seconds on); 0 never.
+# (for one run: HALO_NETWORK_TEST_VEHICLE=<value>)
+network_test_vehicle = 0.0
+
+# This many seconds into an automated test game the host stands its last
+# player on a weapon, which a joining player then picks up; 0 never.
+# (for one run: HALO_NETWORK_TEST_PICKUP=<value>)
+network_test_pickup = 0.0
+
+# Milliseconds everything received is held back (a round trip between two
+# machines of twice it), to test the netcode as over the internet; 0 none.
+# (for one run: HALO_NETWORK_LATENCY=<value>)
+network_latency = 0.0
+
+# Percent of datagrams received that are dropped, for the same; 0 none.
+# (for one run: HALO_NETWORK_LOSS=<value>)
+network_loss = 0.0
+
+# "bot:<seed>" plays controller 1 with a scripted pattern (automated
+# network tests); empty for none.
+# (for one run: HALO_TEST_INPUT=<value>)
+test_input = ""
+
+# The answer to the new version question, for automated tests: "yes",
+# "no" or "never" (do not ask again, confirmed); empty asks.
+# (for one run: HALO_UPDATE_ANSWER=<value>)
+update_answer = ""
+
+# Quit this many seconds after the window opens; 0 never.
+# (for one run: HALO_EXIT_AFTER=<value>)
+exit_after = 0.0
+
+# Keep the window hidden (and never fullscreen).
+# (for one run: HALO_HIDDEN_WINDOW=1 makes it true)
+hidden_window = false
+
+# Run without a window, drawing nothing.
+# (for one run: HALO_NULL_RENDERER=1 makes it true)
+null_renderer = false
+
+# Report OpenGL errors in the log.
+# (for one run: HALO_GL_DEBUG=1 makes it true)
+gl_debug = false
+
+# Log the renderer's draw counts once a second.
+# (for one run: HALO_GPU_STATS=1 makes it true)
+gpu_stats = false
+
+# Log every draw of this frame; -1 none.
+# (for one run: HALO_GPU_TRACE=<value>)
+gpu_trace_frame = -1
+
+# With gpu_trace_frame, also the vertex shader constants.
+# (for one run: HALO_GPU_TRACE_CONSTANTS=1 makes it true)
+gpu_trace_constants = false
+
+# Comma-separated ids of vertex shaders not to draw with.
+# (for one run: HALO_GPU_SKIP_VS=<value>)
+gpu_skip_vertex_shaders = ""
+
+# A folder to write the generated GLSL to; empty none.
+# (for one run: HALO_GPU_DUMP_SHADERS=<value>)
+gpu_dump_shaders = ""
+
+# A GLSL expression every pixel shader shows instead of its result.
+# (for one run: HALO_GPU_DEBUG_EXPR=<value>)
+gpu_debug_expression = ""
+
+# Pixel shaders show their first texture.
+# (for one run: HALO_GPU_DEBUG_T0=1 makes it true)
+gpu_debug_texture0 = false
+
+# Pixel shaders show their vertex colour.
+# (for one run: HALO_GPU_DEBUG_FLAT=1 makes it true)
+gpu_debug_flat = false
+
+# A folder to save frames to (with screenshot_every); empty none.
+# (for one run: HALO_SCREENSHOT_DIR=<value>)
+screenshot_directory = ""
+
+# Save every this many frames to screenshot_directory; 0 none.
+# (for one run: HALO_SCREENSHOT_EVERY=<value>)
+screenshot_every = 0
+
+# A folder to write every texture to as it is uploaded; empty none.
+# (for one run: HALO_TEXTURE_DUMP=<value>)
+texture_dump_directory = ""
+
+# Log texture uploads.
+# (for one run: HALO_TEXTURE_LOG=1 makes it true)
+texture_log = false
+
+# Upload textures again every time they are used.
+# (for one run: HALO_TEXTURE_NO_CACHE=1 makes it true)
+texture_no_cache = false
+
+# Network test only: place host bots facing the human at a measured distance; 0 disables.
+# (for one run: HALO_BOT_ARENA=<value>)
+bot_arena = 0
+
+# Network test arena only: initial finite plasma grenade inventory (0..4).
+# (for one run: HALO_BOT_TEST_GRENADES=<value>)
+bot_grenades = 0
+
+# Keep the local player alive with infinite ammunition during unattended
+# campaign traversal. Only applies while debug.test_input is active.
+# (for one run: HALO_TEST_INVINCIBLE=1 makes it true)
+test_invincible = false
+
+# Give the unattended local player one-shot damage during campaign traversal.
+# Only applies while debug.test_input is active.
+# (for one run: HALO_TEST_FAST_CLEAR=1 makes it true)
+test_fast_clear = false
+
+# Write sparse campaign level, checkpoint, BSP and player-state events to the log
+# for unattended playthrough verification; false writes nothing.
+# (for one run: HALO_CAMPAIGN_TELEMETRY=1 makes it true)
+campaign_telemetry = false
+
+# Revert an unattended solo campaign to its checkpoint when the local player
+# remains dead. Only applies while debug.test_input is active.
+# (for one run: HALO_TEST_AUTO_REVERT=1 makes it true)
+test_auto_revert = false
+
+# Parallel AI worker count: -1 chooses from CPU cores, 0 disables, maximum 3.
+# (for one run: HALO_AI_WORKERS=<value>)
+ai_workers = -1
+
+# Log AI worker shutdown statistics for deterministic test verification.
+# (for one run: HALO_AI_VERIFY=1 makes it true)
+ai_verify = false
+
+# Test-only arena starts as x,y,z,facing entries separated by semicolons.
+# (for one run: HALO_ARENA_TEST_START=<value>)
+arena_test_starts = ""
+
+# Smoke test: reject every Nth universal reliable write; 0 disables.
+# (for one run: HALO_UNIVERSAL_REJECT_EVERY=<value>)
+universal_reject_every = 0
+
+# Smoke test compatibility mismatch: version, build, content or gameplay.
+# (for one run: HALO_UNIVERSAL_MISMATCH=<value>)
+universal_mismatch = ""
+
+# Smoke test: retain the old stale-valid bot navigation behavior.
+# (for one run: HALO_NAV_BASELINE=1 makes it true)
+navigation_baseline = false
+
+# Smoke test: use the old bot driving controller.
+# (for one run: HALO_DRIVING_BASELINE=1 makes it true)
+driving_baseline = false
+
+# Voice chat talks with a tone all the time instead of the microphone
+# (automated tests); no microphone is opened.
+# (for one run: HALO_VOICE_TEST_TONE=1 makes it true)
+voice_test_tone = false
+
+# With debug.network_test_vehicle, seat the player in the nearest vehicle's
+# separate gunner seat (a Warthog's turret) instead of driving.
+# (for one run: HALO_NETWORK_TEST_GUNNER=1 makes it true)
+network_test_gunner = false
+
+[bots]
+
+# Host-owned multiplayer bots, requested 0..32; capped by free slots in a 32-player match.
+# (for one run: HALO_BOT_COUNT=<value>)
+count = 0
+
+# AI-controlled campaign companions, requested 0..32; they do not create viewports.
+# (for one run: HALO_CAMPAIGN_BOT_COUNT=<value>)
+campaign_count = 0
+
+# Experimental per-bot preferences, comma-separated: aggressive,tactical,defensive,support,precision,adaptive.
+# (for one run: HALO_BOT_PERSONALITIES=<value>)
+personalities = "aggressive,tactical,defensive"
+# Per-bot roster names, comma-separated ASCII, up to 11 characters each.
+# (for one run: HALO_BOT_NAMES=<value>)
+names = "BOT_1,BOT_2,BOT_3"
+
+# Pregame team preferences, comma-separated: auto,red,blue. Free-for-all keeps native individual teams.
+# (for one run: HALO_BOT_TEAMS=<value>)
+teams = "auto"
+
+# Independent per-bot execution difficulty, comma-separated: easy,normal,heroic,legendary.
+# (for one run: HALO_BOT_DIFFICULTIES=<value>)
+difficulties = "normal"
+
+# Additional free human slots retained by bot allocation (0..31).
+# (for one run: HALO_BOT_HUMAN_RESERVE=<value>)
+reserved_human_slots = 0
+
+# Companion 1 personality: 0 aggressive, 1 tactical, 2 cautious.
+# (for one run: HALO_CAMPAIGN_BOT_PERSONALITY_1=<value>)
+campaign_personality_1 = 0
+
+# Companion 2 personality: 0 aggressive, 1 tactical, 2 cautious.
+# (for one run: HALO_CAMPAIGN_BOT_PERSONALITY_2=<value>)
+campaign_personality_2 = 1
+
+# Companion 3 personality: 0 aggressive, 1 tactical, 2 cautious.
+# (for one run: HALO_CAMPAIGN_BOT_PERSONALITY_3=<value>)
+campaign_personality_3 = 2
+
+[bindings]
+
+# MOVE FORWARD
+# (for one run: HALO_BIND_forward=<value>)
+forward = 26
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_forward_alt=<value>)
+forward_alt = 0
+
+# MOVE BACKWARD
+# (for one run: HALO_BIND_backward=<value>)
+backward = 22
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_backward_alt=<value>)
+backward_alt = 0
+
+# STRAFE LEFT
+# (for one run: HALO_BIND_left=<value>)
+left = 4
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_left_alt=<value>)
+left_alt = 0
+
+# STRAFE RIGHT
+# (for one run: HALO_BIND_right=<value>)
+right = 7
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_right_alt=<value>)
+right_alt = 0
+
+# JUMP
+# (for one run: HALO_BIND_jump=<value>)
+jump = 44
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_jump_alt=<value>)
+jump_alt = 40
+
+# CROUCH
+# (for one run: HALO_BIND_crouch=<value>)
+crouch = 224
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_crouch_alt=<value>)
+crouch_alt = 6
+
+# FIRE WEAPON
+# (for one run: HALO_BIND_fire=<value>)
+fire = -1
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_fire_alt=<value>)
+fire_alt = 0
+
+# THROW GRENADE
+# (for one run: HALO_BIND_grenade=<value>)
+grenade = -3
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_grenade_alt=<value>)
+grenade_alt = 10
+
+# MELEE
+# (for one run: HALO_BIND_melee=<value>)
+melee = 9
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_melee_alt=<value>)
+melee_alt = -4
+
+# USE / PICK UP
+# (for one run: HALO_BIND_action=<value>)
+action = 8
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_action_alt=<value>)
+action_alt = 0
+
+# RELOAD
+# (for one run: HALO_BIND_reload=<value>)
+reload = 21
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_reload_alt=<value>)
+reload_alt = 0
+
+# SWITCH WEAPON
+# (for one run: HALO_BIND_weapon=<value>)
+weapon = 43
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_weapon_alt=<value>)
+weapon_alt = 0
+
+# SWITCH GRENADE
+# (for one run: HALO_BIND_grenade_type=<value>)
+grenade_type = 20
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_grenade_type_alt=<value>)
+grenade_type_alt = 0
+
+# FLASHLIGHT
+# (for one run: HALO_BIND_flashlight=<value>)
+flashlight = 27
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_flashlight_alt=<value>)
+flashlight_alt = 0
+
+# ZOOM
+# (for one run: HALO_BIND_zoom=<value>)
+zoom = 29
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_zoom_alt=<value>)
+zoom_alt = -2
+
+# PAUSE
+# (for one run: HALO_BIND_pause=<value>)
+pause = 41
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_pause_alt=<value>)
+pause_alt = 0
+
+# SCOREBOARD
+# (for one run: HALO_BIND_scoreboard=<value>)
+scoreboard = 58
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_scoreboard_alt=<value>)
+scoreboard_alt = 0
+
+# SQUAD: FOLLOW
+# (for one run: HALO_BIND_follow=<value>)
+follow = 23
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_follow_alt=<value>)
+follow_alt = 0
+
+# SQUAD: HOLD
+# (for one run: HALO_BIND_hold=<value>)
+hold = 28
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_hold_alt=<value>)
+hold_alt = 0
+
+# SQUAD: ADVANCE
+# (for one run: HALO_BIND_advance=<value>)
+advance = 24
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_advance_alt=<value>)
+advance_alt = 0
+
+# SQUAD: REGROUP
+# (for one run: HALO_BIND_regroup=<value>)
+regroup = 12
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_regroup_alt=<value>)
+regroup_alt = 0
+
+# RECORDING: START / STOP
+# (for one run: HALO_BIND_record=<value>)
+record = 66
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_record_alt=<value>)
+record_alt = 0
+
+# SQUAD: FIRING LINE
+# (for one run: HALO_BIND_line=<value>)
+line = 15
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_line_alt=<value>)
+line_alt = 0
+
+# SQUAD: DISEMBARK
+# (for one run: HALO_BIND_disembark=<value>)
+disembark = 14
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_disembark_alt=<value>)
+disembark_alt = 0
+
+# VOICE CHAT: PUSH TO TALK
+# (for one run: HALO_BIND_voice=<value>)
+voice = 25
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_voice_alt=<value>)
+voice_alt = 0
+
+# SPRINT (SKULL)
+# (for one run: HALO_BIND_sprint=<value>)
+sprint = 225
+
+# Alternate binding; 0 is unbound.
+# (for one run: HALO_BIND_sprint_alt=<value>)
+sprint_alt = 0
+
+[recording]
+
+# MP4 recording height: 720 or 1080; gameplay resolution stays unchanged.
+# (for one run: HALO_RECORDING_HEIGHT=<value>)
+height = 720
+
+# MP4 capture frame rate; the Settings slider supports 24 through 240 FPS.
+# (for one run: HALO_RECORDING_FRAME_RATE=<value>)
+frame_rate = 60
+
+# H.264 quality from 50 through 100; higher values use more disk space.
+# (for one run: HALO_RECORDING_QUALITY=<value>)
+quality = 90
+
+[campaign]
+
+# Campaign starting loadout: 0 uses the level default; 1 chooses two random
+# weapons already loaded by that level.
+# (for one run: HALO_CAMPAIGN_LOADOUT=<value>)
+starting_loadout = 0
+
+# Place a selection of the level's loaded weapons beside the player at the
+# start of each campaign level.
+# (for one run: HALO_CAMPAIGN_ARSENAL=<value>)
+starting_arsenal = false
+
+# Campaign checkpoints: 0 sparse, 1 original level behavior, 2 frequent.
+# Frequent adds safe periodic checkpoints outside combat and cinematics.
+# (for one run: HALO_CAMPAIGN_CHECKPOINTS=<value>)
+checkpoint_frequency = 1
+
+# Play campaign as an Elite with Covenant-looking allies and human-looking
+# Covenant encounters. Original encounter teams, scripts and objectives remain.
+# (for one run: HALO_CAMPAIGN_FACTION_SWAP=<value>)
+faction_swap = false
+
+# Campaign Forge canvas: false retains the mission scripts, encounters, objectives
+# and placed objects; true keeps the BSP and player starts but empties the mission.
+# (for one run: HALO_CAMPAIGN_FORGE_EMPTY=<value>)
+forge_empty = false
+
+[multiplayer]
+
+# Multiplayer loadout: 0 map default, 1 random, 2 AR/Magnum, 3 Plasma
+# Pistol/Rifle, 4 Shotgun/Sniper, 5 Rocket/Needler.
+# (for one run: HALO_MULTIPLAYER_LOADOUT=<value>)
+starting_loadout = 0
+
+[creative]
+
+# Creative lobby default: 0 Forge, 1 Theater, 2 Machinima.
+# (for one run: HALO_CREATIVE_MODE=<value>)
+default_mode = 0
+
+# New Forge objects: 0 dynamic physics, 1 locked solid, 2 locked phase.
+# (for one run: HALO_CREATIVE_PHYSICS=<value>)
+object_physics = 1
+
+# New Machinima points use cached AI pathfinding instead of direct second-by-second following.
+# (for one run: HALO_MACHINIMA_PATH=<value>)
+machinima_path = false
+
+# New Machinima characters react to damage and stop their take when killed.
+# (for one run: HALO_MACHINIMA_DAMAGE=<value>)
+machinima_damage = true
+
+# Theater timeline capacity: 3 or 6 minutes at ten samples per second.
+# (for one run: HALO_THEATER_MINUTES=<value>)
+theater_minutes = 6
+
+# Render dynamic point lights during Forge, Theater and Machinima sessions.
+# (for one run: HALO_CREATIVE_DYNAMIC_LIGHTING=<value>)
+dynamic_lighting = true
+
+# Host permits guests to edit scenes and control playback in Theater and Machinima; cameras remain independent.
+# (for one run: HALO_CREATIVE_GUEST_CONTROLS=<value>)
+guest_controls = true
+
+# Theater starts by playing the newest film recorded on its map, following its player.
+# (for one run: HALO_THEATER_AUTOPLAY=<value>)
+theater_autoplay = true
+
+# Saved-film state samples per second: 10, 15 or 30.
+# (for one run: HALO_THEATER_RECORD_HZ=<value>)
+theater_record_hz = 10
+
+# Theater playback interpolation rate: 0 (off), 30, 60 or 120 frames per second.
+# (for one run: HALO_THEATER_INTERPOLATION_HZ=<value>)
+theater_interpolation_hz = 120
+
+[firefight]
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_GRUNTS=<value>)
+grunts = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_JACKALS=<value>)
+jackals = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_ELITE_MINORS=<value>)
+elite_minors = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_ELITE_MAJORS=<value>)
+elite_majors = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_HUNTERS=<value>)
+hunters = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_GHOSTS=<value>)
+ghosts = 0
+
+# Wraiths with Elite drivers per wave (0..64).
+# (for one run: HALO_FIREFIGHT_WRAITHS=<value>)
+wraiths = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_FLOOD_HUMANS=<value>)
+flood_humans = 0
+
+# Flood carriers per wave (0..64); released forms remain required enemies.
+# (for one run: HALO_FIREFIGHT_FLOOD_CARRIERS=<value>)
+flood_carriers = 0
+
+# Flood infection forms per wave (0..64).
+# (for one run: HALO_FIREFIGHT_FLOOD_INFECTION=<value>)
+flood_infection = 0
+
+# Exact squad count per wave; all zero uses the preset. Total at most 64.
+# (for one run: HALO_FIREFIGHT_FLOOD_ELITES=<value>)
+flood_elites = 0
+
+# Host Firefight difficulty: 0 Easy, 1 Normal, 2 Heroic, 3 Legendary.
+# (for one run: HALO_FIREFIGHT_DIFFICULTY=<value>)
+difficulty = 1
+
+# Enemy biped health and shields, 25 to 400 percent in steps of 25.
+# (for one run: HALO_FIREFIGHT_ENEMY_HEALTH=<value>)
+enemy_health = 100
+
+# Enemy damage, 25 to 400 percent in steps of 25, after difficulty.
+# (for one run: HALO_FIREFIGHT_ENEMY_DAMAGE=<value>)
+enemy_damage = 100
+
+# Player biped health and shields, 25 to 400 percent in steps of 25.
+# (for one run: HALO_FIREFIGHT_PLAYER_HEALTH=<value>)
+player_health = 100
+
+# Player damage, 25 to 400 percent in steps of 25.
+# (for one run: HALO_FIREFIGHT_PLAYER_DAMAGE=<value>)
+player_damage = 100
+
+# Generator Defense objectives: 1 to 3. Keep at least one alive through all waves.
+# (for one run: HALO_FIREFIGHT_GENERATORS=<value>)
+generators = 3
+
+# Bonus enemies after each set: 0 disables, 1 to 64 enables a timed round with free respawns.
+# (for one run: HALO_FIREFIGHT_BONUS_ENEMIES=<value>)
+bonus_enemies = 0
+
+# Bonus round time limit: 10 to 120 seconds in steps of 5.
+# (for one run: HALO_FIREFIGHT_BONUS_SECONDS=<value>)
+bonus_seconds = 30
+
+# Team supply pickups: 0 off, 1 each round, 2 each wave. Health, ammunition and grenades near living teammates.
+# (for one run: HALO_FIREFIGHT_SUPPLIES=<value>)
+supplies = 0
+
+# Mythic skull: double enemy biped health and shields, 0 off or 1 on.
+# (for one run: HALO_FIREFIGHT_MYTHIC=<value>)
+mythic = 0
+
+# Shared respawns after initial spawns: -1 unlimited, 0 to 99 finite.
+# (for one run: HALO_FIREFIGHT_SHARED_RESPAWNS=<value>)
+shared_respawns = -1
+
+# Respawn delay for eligible Firefight players, 3 to 30 seconds.
+# (for one run: HALO_FIREFIGHT_RESPAWN_SECONDS=<value>)
+respawn_seconds = 3
+
+# Host enemies per wave, 1 to 64. Clients use the host's settings.
+# (for one run: HALO_FIREFIGHT_ENEMIES=<value>)
+enemies = 8
+
+# Host waves per round, 1 to 20.
+# (for one run: HALO_FIREFIGHT_WAVES=<value>)
+waves = 5
+
+# Host rounds per set, 1 to 10.
+# (for one run: HALO_FIREFIGHT_ROUNDS=<value>)
+rounds = 3
+
+# Host sets per match, 1 to 10.
+# (for one run: HALO_FIREFIGHT_SETS=<value>)
+sets = 1
+
+# Host delay before the first wave, 0 to 60 seconds.
+# (for one run: HALO_FIREFIGHT_WARMUP=<value>)
+warmup_seconds = 10
+
+# Host delay between waves, 0 to 60 seconds.
+# (for one run: HALO_FIREFIGHT_REST=<value>)
+rest_seconds = 10
+
+# Seconds between this wave's authored reinforcement groups, 0 to 60.
+# (for one run: HALO_FIREFIGHT_WAVE1_SPACING=<value>)
+wave1.spacing_seconds = 3
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE1_TYPE=<value>)
+wave1.subwave1_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE1_COUNT=<value>)
+wave1.subwave1_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE2_TYPE=<value>)
+wave1.subwave2_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE2_COUNT=<value>)
+wave1.subwave2_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE3_TYPE=<value>)
+wave1.subwave3_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE3_COUNT=<value>)
+wave1.subwave3_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE4_TYPE=<value>)
+wave1.subwave4_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE1_SUBWAVE4_COUNT=<value>)
+wave1.subwave4_count = 0
+
+# Seconds between this wave's authored reinforcement groups, 0 to 60.
+# (for one run: HALO_FIREFIGHT_WAVE2_SPACING=<value>)
+wave2.spacing_seconds = 3
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE1_TYPE=<value>)
+wave2.subwave1_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE1_COUNT=<value>)
+wave2.subwave1_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE2_TYPE=<value>)
+wave2.subwave2_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE2_COUNT=<value>)
+wave2.subwave2_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE3_TYPE=<value>)
+wave2.subwave3_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE3_COUNT=<value>)
+wave2.subwave3_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE4_TYPE=<value>)
+wave2.subwave4_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE2_SUBWAVE4_COUNT=<value>)
+wave2.subwave4_count = 0
+
+# Seconds between this wave's authored reinforcement groups, 0 to 60.
+# (for one run: HALO_FIREFIGHT_WAVE3_SPACING=<value>)
+wave3.spacing_seconds = 3
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE1_TYPE=<value>)
+wave3.subwave1_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE1_COUNT=<value>)
+wave3.subwave1_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE2_TYPE=<value>)
+wave3.subwave2_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE2_COUNT=<value>)
+wave3.subwave2_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE3_TYPE=<value>)
+wave3.subwave3_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE3_COUNT=<value>)
+wave3.subwave3_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE4_TYPE=<value>)
+wave3.subwave4_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE3_SUBWAVE4_COUNT=<value>)
+wave3.subwave4_count = 0
+
+# Seconds between this wave's authored reinforcement groups, 0 to 60.
+# (for one run: HALO_FIREFIGHT_WAVE4_SPACING=<value>)
+wave4.spacing_seconds = 3
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE1_TYPE=<value>)
+wave4.subwave1_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE1_COUNT=<value>)
+wave4.subwave1_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE2_TYPE=<value>)
+wave4.subwave2_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE2_COUNT=<value>)
+wave4.subwave2_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE3_TYPE=<value>)
+wave4.subwave3_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE3_COUNT=<value>)
+wave4.subwave3_count = 0
+
+# Enemy type index for this authored Firefight reinforcement group.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE4_TYPE=<value>)
+wave4.subwave4_type = 0
+
+# Combatants in this reinforcement group, 0 to 64. A wave totals at most 64.
+# (for one run: HALO_FIREFIGHT_WAVE4_SUBWAVE4_COUNT=<value>)
+wave4.subwave4_count = 0
+
+# Spartan primary weapon: 0 map default, 1 assault rifle, 2 pistol, 3 plasma pistol, 4 plasma rifle, 5 shotgun, 6 sniper rifle, 7 rocket launcher, 8 needler.
+# (for one run: HALO_FIREFIGHT_PRIMARY=<value>)
+player_primary = 0
+
+# Spartan secondary weapon, using the Firefight primary weapon values. Zero leaves the slot empty or map-defined.
+# (for one run: HALO_FIREFIGHT_SECONDARY=<value>)
+player_secondary = 0
+
+[voice]
+
+# Voice chat with the other players of a network game (needs the
+# distributed netcode). The microphone is open only during such games.
+# (for one run: HALO_VOICE=<value>)
+enabled = true
+
+# Who you hear: 0 proximity (everyone nearby, by distance and direction),
+# 1 proximity plus your team by radio, 2 your team only, 3 everyone.
+# (for one run: HALO_VOICE_CHANNEL=<value>)
+channel = 0
+
+# How far away proximity chat reaches, in metres, 10 to 200.
+# (for one run: HALO_VOICE_RANGE=<value>)
+proximity_range = 50
+
+# Send whenever you speak above voice.open_mic_threshold; false sends only
+# while the push-to-talk key (bindings.voice) is held.
+# (for one run: HALO_VOICE_OPEN_MIC=<value>)
+open_mic = false
+
+# How loud speech must be to open the microphone, in percent (1 to 50).
+# (for one run: HALO_VOICE_THRESHOLD=<value>)
+open_mic_threshold = 8
+
+# The volume of the other players' voices, in percent (0 to 200).
+# (for one run: HALO_VOICE_VOLUME=<value>)
+volume = 100
+
+# How much your microphone is amplified, in percent (0 to 200).
+# (for one run: HALO_MICROPHONE_VOLUME=<value>)
+microphone_volume = 100
+
+[skulls]
+
+# Whuppopotamus skull: enemies see and hear farther and aim better.
+# (for one run: HALO_SKULL_WHUPPOPOTAMUS=<value>)
+whuppopotamus = false
+
+# Thunderstorm skull: enemies are promoted to their higher ranks.
+# (for one run: HALO_SKULL_THUNDERSTORM=<value>)
+thunderstorm = false
+
+# Blind skull: no HUD and no first-person weapon.
+# (for one run: HALO_SKULL_BLIND=<value>)
+blind = false
+
+# I Would Have Been Your Daddy skull: much more combat dialogue.
+# (for one run: HALO_SKULL_IWHBYD=<value>)
+iwhbyd = false
+
+# Catch skull: enemies throw more grenades and drop more of them.
+# (for one run: HALO_SKULL_CATCH=<value>)
+catch = false
+
+# Grunt Birthday Party skull: Grunt headshots burst in celebration.
+# (for one run: HALO_SKULL_GRUNT_BIRTHDAY_PARTY=<value>)
+grunt_birthday_party = false
+
+# Famine skull: weapons dropped by enemies hold half their ammunition.
+# (for one run: HALO_SKULL_FAMINE=<value>)
+famine = false
+
+# Envy skull: the flashlight key turns active camouflage on and off.
+# (for one run: HALO_SKULL_ENVY=<value>)
+envy = false
+
+# Assassins skull: enemies are always cloaked.
+# (for one run: HALO_SKULL_ASSASSINS=<value>)
+assassins = false
+
+# Mythic skull: enemies have double health and shields.
+# (for one run: HALO_SKULL_MYTHIC=<value>)
+mythic = false
+
+# Sputnik skull: explosions and hits throw objects much farther.
+# (for one run: HALO_SKULL_SPUTNIK=<value>)
+sputnik = false
+
+# Angry skull: enemies fire faster.
+# (for one run: HALO_SKULL_ANGRY=<value>)
+angry = false
+
+# Ghost skull: enemies never flinch or stagger.
+# (for one run: HALO_SKULL_GHOST=<value>)
+ghost = false
+
+# Iron skull: dying alone restarts the level; in co-op it reverts everyone to the checkpoint.
+# (for one run: HALO_SKULL_IRON=<value>)
+iron = false
+
+# Black Eye skull: shields recharge only by meleeing enemies.
+# (for one run: HALO_SKULL_BLACK_EYE=<value>)
+black_eye = false
+
+# Sprint skull: hold the sprint key to run faster.
+# (for one run: HALO_SKULL_SPRINT=<value>)
+sprint = false
+
+# Skull placement mode: in campaign, choose a skull and set its spot in the level.
+# Spots are saved in skull_spots.txt with the saved games.
+# (for one run: HALO_SKULL_PLACEMENT=<value>)
+placement = false

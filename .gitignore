@@ -1,0 +1,6 @@
+assets/
+maps/
+*.bak
+Recordings/
+*.log
+*.pdb
